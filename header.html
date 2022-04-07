@@ -1,0 +1,207 @@
+{% include 'website/include/layout.html' %}
+{% load static %}
+<header class="header">
+    <div class="header-middle sticky-header">
+        <div class="container">
+            <div class="header-left">
+                <button class="mobile-menu-toggler">
+                    <span class="sr-only">Toggle mobile menu</span>
+                    <i class="icon-bars"></i>
+                </button>
+
+                <a href="index.html" class="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Molla Logo" width="105" height="25">
+                </a>
+
+                <nav class="main-nav">
+                    <ul class="menu sf-arrows">
+                        <li class="megamenu-container active">
+                            <a href="{% url 'website:home' %}" >Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'website:productcategory' %}" class="sf-with-ul">Shop Category</a>
+                            <div class="megamenu megamenu-md">
+                                <div class="row no-gutters">
+                                    <div class="col-md-8">
+                                        <div class="menu-col">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="menu-title">Electronics</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/computer-accessories">Computer & Accessories</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/mobile-accessories">Mobiles & Accessories</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/tablets">Tablets</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/camera-photo">Camera & Photos</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/tv-videos">TV & Videos</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/headphones">Headphones</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/video-games">Video Games</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/bluetooth-wireless">Bluetooth & Wireless Speakers</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/power_solution">Generator, UPS & Power Solutions</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/ac-cooler">AC & Coolers</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/fridge-freezers">Fridge & Freezers</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/electronicsCategory/washing">Washing Machines & Dryers</a></li>
+                                                    </ul>
+                                            
+                                                </div>
+                                                
+                                                    <div class="col-md-4">
+
+                                                    <div class="menu-title">Vehicles</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="http://127.0.0.1:8000/category/car">Cars</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/caraccessories">Car Accessories</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/Bike">Motorcycles</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/Bicycles">Bicycles</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/rickshaws chingchi">Rickshaws & Chingchi</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/scooters">Scooters</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/atvquads">ATVs & Quads</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/spareparts">Spare Parts</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/busesvanstucks">Buses, Vans & Trucks</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/tractorstrailers">Tractors & Trailers</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/boats">Boats</a></li>
+                                                    </ul>
+                                                    <div class="menu-title">Pets</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="http://127.0.0.1:8000/category/fishes">Fishes & Aquariums</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/petfoods">Pet Food</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/category/petaccessories">Pet Accessories</a></li>
+                                                    </ul>
+                                                    
+                                                </div><!-- End .col-md-6 -->
+
+                                                <div class="col-md-4">
+                                                    <div class="menu-title">Home Decor & Appliances</div><!-- End .menu-title -->
+                                                <ul>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Beds-clothes">Beds & Closets</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/sofa-chair">Sofas & Chairs</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Kitchen-Appliances">Kitchen Appliances</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Tables-Dining">Tables & Dining</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Garden-Outdoor">Garden & Outdoor</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Curtins-Blinds">Curtains & Blinds</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/HomeDecorCategory/Other">Other Household Items</a></li>
+                                                </ul>
+                                                <div class="menu-title">Beauty & Health</div><!-- End .menu-title -->
+                                                <ul>
+                                                    <li><a href="http://127.0.0.1:8000/BeautyCategory/Clothing">Clothing</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/BeautyCategory/Footwear">Footwear</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/BeautyCategory/Accessories">Accessories</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/BeautyCategory/Makeup-Skincare">Makeup & Skincare</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/BeautyCategory/Haircare">Haircare</a></li>
+                                                </ul>
+                                                
+                                                </div>
+                                            </div><!-- End .row -->
+                                        </div><!-- End .menu-col -->
+                                    </div><!-- End .col-md-8 -->
+
+                                    <div class="col-md-4">
+                                        <div class="menu-title">Property</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="http://127.0.0.1:8000/PropertyCategory/ForSale:Houses-Apartments">For Sale: Houses & Apartments</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/PropertyCategory/ForRent:Houses-Apartments">For Rent: Houses & Apartments</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/PropertyCategory/Lands-Plots">Lands And Plots</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/PropertyCategory/ForSale:Offices-Shops">For Sale: Offices & Shops</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/PropertyCategory/ForRent:Offices-Shops">For Rent: Offices & Shops</a></li>
+                                                    </ul>
+                                        <div class="menu-title">Services</div><!-- End .menu-title -->
+                                                    <ul>
+                                                        <li><a href="http://127.0.0.1:8000/ServicesCategory/Electronics-Computers">Electronics & Computers</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/ServicesCategory/Tutoring">Tutoring</a></li>
+                                                        <li><a href="http://127.0.0.1:8000/ServicesCategory/Drivers-CarRental">Drivers & Car Rental</a></li>
+                                                    </ul>
+                                        <div class="menu-title">Books, Sports & Music</div><!-- End .menu-title -->
+                                                <ul>
+                                                    <li><a href="http://127.0.0.1:8000/Book_SportCategory/Books">Books</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/Book_SportCategory/Sports-Equipments">Sports Equipments</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/Book_SportCategory/Musical-Instruments">Musical Instruments</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/Book_SportCategory/Gym-Equipments">Gym Equipments</a></li>
+                                                    <li><a href="http://127.0.0.1:8000/Book_SportCategory/Other">Other Hobbies</a></li>
+                                                </ul>
+                                    </div><!-- End .col-md-4 -->
+                                </div><!-- End .row -->
+                            </div><!-- End .megamenu megamenu-md -->
+                        </li>
+                            <li>
+                            <a href="{% url 'website:blog' %}">Blog</a>
+                            </li>
+                            <li><a href="{% url 'website:jobs' %}">Jobs Classified</a></li>
+                            <li><a href="{% url 'website:nft' %}">NFT</a></li>
+                            <li><a href="#signin-modal" data-toggle="modal">Login</a></li>
+                            <li><a href="{% url 'website:wishlist' %}"><i class="icon-wishlist"></i>Wishlist</a></li>
+                        </ul><!-- End .menu -->
+                    </nav><!-- End .main-nav -->
+                </div><!-- End .header-left -->
+                
+                <div class="header-right">
+                    <div class="search-container">
+                    <form action="">
+                          <input type="text" placeholder="Search.." name="search">
+                          <button class="btn-primary" type="submit"><i class="icon-search"></i></button>
+                        </form>
+                    </div>
+
+                <div class="dropdown cart-dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+                        <i class="icon-shopping-cart"></i>
+                        <span class="cart-count">2</span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-cart-products">
+                            <div class="product">
+                                <div class="product-cart-details">
+                                    <h4 class="product-title">
+                                        <a href="{% url 'website:product' %}">Beige knitted elastic runner shoes</a>
+                                    </h4>
+
+                                    <span class="cart-product-info">
+                                        <span class="cart-product-qty">1</span>
+                                        x $84.00
+                                    </span>
+                                </div><!-- End .product-cart-details -->
+
+                                <figure class="product-image-container">
+                                    <a href="{% url 'website:product' %}" class="product-image">
+                                        <img src="{% static 'images/products/cart/product-1.jpg' %}" alt="product">
+                                    </a>
+                                </figure>
+                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                            </div><!-- End .product -->
+
+                            <div class="product">
+                                <div class="product-cart-details">
+                                    <h4 class="product-title">
+                                        <a href="{% url 'website:product' %}">Blue utility pinafore denim dress</a>
+                                    </h4>
+
+                                    <span class="cart-product-info">
+                                        <span class="cart-product-qty">1</span>
+                                        x $76.00
+                                    </span>
+                                </div><!-- End .product-cart-details -->
+
+                                <figure class="product-image-container">
+                                    <a href="{% url 'website:product' %}" class="product-image">
+                                        <img src="{% static 'images/products/cart/product-2.jpg' %}" alt="product">
+                                    </a>
+                                </figure>
+                                <a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+                            </div><!-- End .product -->
+                        </div><!-- End .cart-product -->
+
+                        <div class="dropdown-cart-total">
+                            <span>Total</span>
+
+                            <span class="cart-total-price">$160.00</span>
+                        </div><!-- End .dropdown-cart-total -->
+
+                        <div class="dropdown-cart-action">
+                            <a href="{% url 'website:cart' %}" class="btn btn-primary">View Cart</a>
+                            <a href="{% url 'website:checkout' %}" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+                        </div><!-- End .dropdown-cart-total -->
+                    </div><!-- End .dropdown-menu -->
+                </div><!-- End .cart-dropdown -->
+            </div><!-- End .header-right -->
+        </div><!-- End .container -->
+    </div><!-- End .header-middle -->
+</header><!-- End .header -->

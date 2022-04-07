@@ -1,7 +1,7 @@
 from math import ceil
 from django.shortcuts import render
 
-from website.models import Blogs_Articles, PostClassifiedJob, Vehicles, NFT
+from website.models import Blogs_Articles, Books_Sports_Hobbies, Clothing_Beauty_Health, Electronics, HomeDecor, House_Apartments, PostClassifiedJob, Services, Vehicles, NFT
 
 # Create your views here.
 
@@ -38,7 +38,74 @@ def Category(request,name):
     categorywiseproduct.append([brandprod,range(1,slides),slides])
     context={'allproduct':categorywiseproduct}
     return render(request, template_name,context)
+def ElectronicsCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=Electronics.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)
 
+def HomeDecorCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=HomeDecor.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)
+def BeautyCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=Clothing_Beauty_Health.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)
+def PropertyCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=House_Apartments.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)
+
+def ServicesCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=Services.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)
+def Book_SportCategory(request,name):
+    categorywiseproduct=[]
+    print("yeh name hay",name)
+    template_name = "website/category.html"
+    productbrand=Books_Sports_Hobbies.objects.filter(category__icontains=name)
+    print("Yeh all product hain",productbrand)
+    productbrandlength=len(productbrand)
+    slides=productbrandlength // 4 + ceil((productbrandlength / 4) - (productbrandlength // 4))
+    categorywiseproduct.append([productbrand,range(1,slides),slides])
+    context={'allproduct':categorywiseproduct}
+    return render(request, template_name,context)    
 def Checkout(request):
     template_name = "website/checkout.html"
     return render(request, template_name)
